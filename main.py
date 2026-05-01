@@ -1,5 +1,1 @@
-import fitz
-
-API_KEY = '7WL3IZYUM41423TY'
-symbol = 'AAPL'
-
+print("AM I RUNNING THE RIGHT FILE?")
