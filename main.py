@@ -1,3 +1,3 @@
 import pymupdf
 
-doc = pymupdf.open(Apple's 2025 10-K)
+pdf_path = r"C:\Users\TronM\Documents\AJ\apple_2025_10k.pdf"
