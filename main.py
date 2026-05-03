@@ -1,2 +1,4 @@
-import fitz
-print("AM I RUNNING THE RIGHT FILE?")
+import pymupdf
+from PIL import Image
+
+doc = pymup
