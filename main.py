@@ -6,8 +6,10 @@ uploaded_file = st.file_uploader(
   type = ["pdf"],
   help = "Please only upload pdf files"
 )
-for page_number in range(len(uploaded_file)):
-  page = uploaded_file[page_number]
+finished_file = fitz.open(stream=uploaded_file.read(), filetype=pdf)
+
+for page_number in range(len(finished_file)):
+  page = finished_file[page_number]
   text = page.extract_text()
   st.text_area("Extracted Text", text)
  
