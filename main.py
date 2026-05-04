@@ -8,7 +8,7 @@ uploaded_file = st.file_uploader(
   help = "Please only upload pdf files"
 )
 for page_number in range(len(uploaded_file)):
-  page = doc[page_number]
+  page = uploaded_file[page_number]
   text = page.get_text()
   print(text)
  
