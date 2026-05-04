@@ -1,4 +1,5 @@
 import fitz
+import streamlit as st
 
 pdf_path = "./data/Apple_2025_10-K.pdf"
 doc = fitz.open(pdf_path)
