@@ -9,6 +9,6 @@ uploaded_file = st.file_uploader(
 )
 for page_number in range(len(uploaded_file)):
   page = uploaded_file[page_number]
-  text = page.get_text()
-  print(text)
+  text = page.extract_text()
+  st.text_area("Extracted Text", text)
  
