@@ -13,9 +13,8 @@ if uploaded_file is not None:
   for page_number in range(len(finished_file)):
     page = finished_file[page_number]
     text = page.get_text()
-    for line in text.split('\n'):
-      if(line.strip().isdigit()):
-        total+=line  
+    total+= text
+   
 
 st.text_area("Extracted Text", total, height = 600, width = 1100)
   
