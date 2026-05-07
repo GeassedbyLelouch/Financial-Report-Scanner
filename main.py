@@ -16,7 +16,7 @@ if uploaded_file is not None:
     for line in text.split('\n'):
       clean_line = line.strip().replace(",", "")
       if(clean_line.isdigit()):
-         total+=clean_line
+         total+=clean_line + ("\n")
       else:
         continue;
    
