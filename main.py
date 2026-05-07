@@ -17,7 +17,7 @@ if uploaded_file is not None:
       if(line.strip().isdigit()):
         total+=line  
 
-st.text_area("Extracted Text", total, height = 400, width = 500)
+st.text_area("Extracted Text", total, height = 600, width = 1100)
   
 
 
