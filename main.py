@@ -15,7 +15,10 @@ if uploaded_file is not None:
     text = page.get_text()
     for line in text.split('\n'):
       clean_line = line.strip().replace(",", "")
-      total+=clean_line
+      if(clean_line.isdigit()):
+         total+=clean_line
+      else:
+        continue;
    
 
 st.text_area("Extracted Text", total, height = 600, width = 1100)
