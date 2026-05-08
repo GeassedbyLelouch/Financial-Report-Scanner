@@ -6,6 +6,7 @@ uploaded_file = st.file_uploader(
   type = ["pdf"],
   help = "Please only upload pdf files"
 )
+total = ""
 if uploaded_file is not None:
   file_bytes = uploaded_file.read()
   finished_file = fitz.open(stream=file_bytes, filetype="pdf")
@@ -18,11 +19,11 @@ if uploaded_file is not None:
         for word in clean_line:
           if word.isdigit():
             Debt_Equity_Ratio=word + ("\n")
+            total = Debt_Equity_Ratio
             break;
         else:
            continue;
    
-total = Debt_Equity_Ratio
 st.text_area("Extracted Text", total, height = 600, width = 1100)
   
 
