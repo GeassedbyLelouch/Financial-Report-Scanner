@@ -17,10 +17,9 @@ if uploaded_file is not None:
         clean_line = line.split()
         for word in clean_line:
           if word.isdigit():
-           Debt_Equity_Ratio=clean_line + ("\n")
-           break;
+            Debt_Equity_Ratio=word + ("\n")
+            break;
         else:
-           Debt_Equity_Ratio=None
            continue;
    
 
