@@ -25,7 +25,7 @@ if uploaded_file is not None:
              Debt_Equity_Ratio=word + ("\n")
              total = Debt_Equity_Ratio
              break;
-           else:
+          else:
              continue;
    
 st.text_area("Extracted Text", total, height = 600, width = 1100)
