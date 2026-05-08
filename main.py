@@ -19,6 +19,7 @@ if uploaded_file is not None:
         clean_line = line.split()
         for word in clean_line:
           word = word.replace(",", "")
+          st.write(f"Word:{word}")
           if word.isdigit():
             Debt_Equity_Ratio=word + ("\n")
             total = Debt_Equity_Ratio
