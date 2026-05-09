@@ -20,8 +20,8 @@ if uploaded_file is not None:
         st.write(f"Found matching line: {line}")
         for word in line.split():
           if(word.replace(",", "").isdigit()):
-            clean_line = word
-            st.write(f"Word:{clean_line}")
+            clean_word = word.replace(",", "")
+            st.write(f"Word:{clean_word}")
             Debt_Equity_Ratio=clean_line + ("\n")
             total = Debt_Equity_Ratio
             break;
