@@ -6,7 +6,7 @@ uploaded_file = st.file_uploader(
   type = ["pdf"],
   help = "Please only upload pdf files"
 )
-total = ""
+Free_Cash_Flow = ""
 if uploaded_file is not None:
   file_bytes = uploaded_file.read()
   finished_file = fitz.open(stream=file_bytes, filetype="pdf")
@@ -23,18 +23,18 @@ if uploaded_file is not None:
               if(word.replace(",", "").isdigit()):
                 clean_word = word.replace(",", "")
                 st.write(f"Word:{clean_word}")
-                Debt_Equity_Ratio=clean_word + ("\n")
-                total = Debt_Equity_Ratio
+                total = clean_word + ("\n")
+                Free_Cash_Flow = total
                 break;
               else:
                 continue;
-          if total:
+          if Free_Cash_Flow:
              break;
-      if total:
-        break;
+      if Free_Cash_Flow:
+             break;
 
-    if total:
-      break;
+    if Free_Cash_Flow:
+             break;
 st.text_area("Extracted Text", total, height = 600, width = 1100)
   
 
