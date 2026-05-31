@@ -30,6 +30,14 @@ if uploaded_file is not None:
                 continue;
           if Free_Cash_Flow:
              break;
+    for index, line in enumerate(lines):
+       keywords = ["property", "plant", "equipment"]
+       if line.lower() == ("Capital expenditures") or if all(word in line.lower() for word in keywords):
+          nearby_lines = lines[index:index+5]
+          for nearby_line in nearby_lines:
+            for word in nearby_line.split():
+              if(word.replace("("
+                            
       if Free_Cash_Flow:
              break;
 
