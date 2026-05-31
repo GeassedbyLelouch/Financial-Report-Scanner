@@ -6,6 +6,12 @@ uploaded_file = st.file_uploader(
   type = ["pdf"],
   help = "Please only upload pdf files"
 )
+keywords = ["property", "plant", "equipment"]
+replacements = {
+    ",": "",
+    "-": "",
+    "/": ""
+}
 Free_Cash_Flow = ""
 if uploaded_file is not None:
   file_bytes = uploaded_file.read()
@@ -31,8 +37,7 @@ if uploaded_file is not None:
           if Free_Cash_Flow:
              break;
     for index, line in enumerate(lines):
-       keywords = ["property", "plant", "equipment"]
-       if line.lower() == ("Capital expenditures") or if all(word in line.lower() for word in keywords):
+       if line.lower() == ("capital expenditures") or if any(word in line.lower() for word in keywords):
           nearby_lines = lines[index:index+5]
           for nearby_line in nearby_lines:
             for word in nearby_line.split():
