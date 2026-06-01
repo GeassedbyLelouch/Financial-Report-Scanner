@@ -10,7 +10,9 @@ keywords = ["property", "plant", "equipment"]
 replacements = {
     ",": "",
     "-": "",
-    "/": ""
+    "/": "",
+    "(": "",
+    ")": ""
 }
 Free_Cash_Flow = ""
 if uploaded_file is not None:
