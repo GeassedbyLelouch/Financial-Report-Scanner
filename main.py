@@ -44,7 +44,7 @@ if uploaded_file is not None:
           nearby_lines = lines[index:index+5]
           for nearby_line in nearby_lines:
             for word in nearby_line.split():
-              if(word.translate(str.maketrans(replacements)).isdigit())
+              if(word.translate(str.maketrans(replacements)).isdigit()):
                 final_word = word.translate(str.maketrans(replacements))
                 total = int(final_word)
                 Free_Cash_Flow -= total
