@@ -60,7 +60,7 @@ if uploaded_file is not None:
 
     if Free_Cash_Flow != 0 or Free_Cash_Flow != initial_num:
              break;
-st.text_area("Extracted Text", total, height = 600, width = 1100)
+st.text_area("Extracted Text", Free_Cash_Flow, height = 600, width = 1100)
   
 
 
