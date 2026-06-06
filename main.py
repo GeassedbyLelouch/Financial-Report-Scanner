@@ -51,15 +51,15 @@ if uploaded_file is not None:
                 break;
               else:
                 continue;
-          if Free_Cash_Flow != 0 || Free_Cash_Flow != initial_num:
+          if Free_Cash_Flow != 0 or Free_Cash_Flow != initial_num:
             break;
                   
                 
                             
-      if Free_Cash_Flow != 0 || Free_Cash_Flow != initial_num:
+      if Free_Cash_Flow != 0 or Free_Cash_Flow != initial_num:
              break;
 
-    if Free_Cash_Flow != 0 || Free_Cash_Flow != initial_num:
+    if Free_Cash_Flow != 0 or Free_Cash_Flow != initial_num:
              break;
 st.text_area("Extracted Text", total, height = 600, width = 1100)
   
