@@ -14,7 +14,8 @@ replacements = {
     "(": "",
     ")": ""
 }
-Free_Cash_Flow = ""
+initial_num = 0
+Free_Cash_Flow = 0
 if uploaded_file is not None:
   file_bytes = uploaded_file.read()
   finished_file = fitz.open(stream=file_bytes, filetype="pdf")
@@ -30,25 +31,35 @@ if uploaded_file is not None:
           for word in nearby_line.split():
               if(word.replace(",", "").isdigit()):
                 clean_word = word.replace(",", "")
-                st.write(f"Word:{clean_word}")
-                total = clean_word + ("\n")
+                total = int(clean_word)
+                initial_num = total
                 Free_Cash_Flow = total
                 break;
               else:
                 continue;
-          if Free_Cash_Flow:
+          if Free_Cash_Flow != 0:
              break;
     for index, line in enumerate(lines):
        if line.lower() == ("capital expenditures") or if any(word in line.lower() for word in keywords):
           nearby_lines = lines[index:index+5]
           for nearby_line in nearby_lines:
             for word in nearby_line.split():
-              if(word.replace("("
+              if(word.translate(str.maketrans(replacements)).isdigit())
+                final_word = word.translate(str.maketrans(replacements))
+                total = int(final_word)
+                Free_Cash_Flow -= total
+                break;
+              else:
+                continue;
+          if Free_Cash_Flow != 0 || Free_Cash_Flow != initial_num:
+            break;
+                  
+                
                             
-      if Free_Cash_Flow:
+      if Free_Cash_Flow != 0 || Free_Cash_Flow != initial_num:
              break;
 
-    if Free_Cash_Flow:
+    if Free_Cash_Flow != 0 || Free_Cash_Flow != initial_num:
              break;
 st.text_area("Extracted Text", total, height = 600, width = 1100)
   
