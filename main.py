@@ -56,7 +56,7 @@ if uploaded_file is not None:
                   
                 
                             
-      if Free_Cash_Flow != 0 or Free_Cash_Flow != initial_num:
+       if Free_Cash_Flow != 0 or Free_Cash_Flow != initial_num:
              break;
 
     if Free_Cash_Flow != 0 or Free_Cash_Flow != initial_num:
