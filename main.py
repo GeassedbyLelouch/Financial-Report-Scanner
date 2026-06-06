@@ -1,3 +1,4 @@
+import pymupdf as fitz
 import streamlit as st
 
 uploaded_file = st.file_uploader(
