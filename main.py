@@ -47,9 +47,9 @@ if uploaded_file is not None:
               if(word.translate(str.maketrans(replacements)).isdigit()):
                 final_word = word.translate(str.maketrans(replacements))
                 total = int(final_word)
-                print(line"\n")
-                print(total"\n")
-                print(final_word"\n")
+                print(f"{line}\n")
+                print(f"{total}\n")
+                print(f"{final_word}\n")
                 Free_Cash_Flow -= total
                 break;
               else:
