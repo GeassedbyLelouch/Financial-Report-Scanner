@@ -40,7 +40,7 @@ if uploaded_file is not None:
           if Free_Cash_Flow != 0:
              break;
     for index, line in enumerate(lines):
-       if line.lower() == ("capital expenditures") or any(word in line.lower() for word in keywords):
+       if line.lower() == ("capital expenditures") or all(word in line.lower() for word in keywords):
           nearby_lines = lines[index:index+5]
           for nearby_line in nearby_lines:
             for word in nearby_line.split():
